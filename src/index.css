@@ -40,6 +40,21 @@ a {
   background-color: var(--color-primary);
 }
 
+.btn-secondary {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--font-weight-title);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary);
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -52,6 +67,11 @@ a {
   background-color: var(--color-bg-offwhite);
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
 }
 
 .hero-section {
@@ -323,4 +343,23 @@ a {
 .btn-primary.cta-big:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------ Guadalupe CTA ------------------ */
+.btn-guadalupe {
+  @apply relative inline-block font-lexend font-semibold text-white py-2 px-5 rounded shadow-md bg-gradient-to-br from-primary to-secondary transition-transform duration-300 ease-out;
+}
+
+.btn-guadalupe:hover {
+  @apply scale-105 shadow-lg;
+}
+
+.btn-guadalupe::after {
+  content: '';
+  @apply absolute inset-0 rounded opacity-0 transition-opacity duration-700;
+  background: radial-gradient(circle at center, rgba(203, 152, 37, 0.35), transparent 70%);
+}
+
+.btn-guadalupe:hover::after {
+  @apply opacity-100;
 }
