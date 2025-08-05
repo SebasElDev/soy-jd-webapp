@@ -260,6 +260,13 @@ a {
   margin-bottom: 2.5rem; /* increased spacing below rotating words */
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .rotating-words {
   display: inline-block;
   color: var(--color-secondary);
